@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+<h1>This is your first JS exercise</h1>
+
+<p><input type="text" name="inp" id="inp"></p>
+<p>
+<div id="msg"></div>
+</p>
+<p>
+    <button onclick="show()" id="knap">Click me</button>
+</p>
+
+
+<script>
+
+    var count = 1
+
+    function show() {
+        if (count == 0) {
+            document.getElementById('knap').innerHTML = 'Click me'
+            document.getElementById('msg').innerHTML = ''
+            count++
+        }
+        if (count == 1) {
+            document.getElementById('knap').innerHTML = 'Change text above and click me again!'
+            document.getElementById('inp').value = 'Change me'
+            count++
+        } else {
+            document.getElementById('knap').innerHTML = 'Click me again!'
+            var i = document.getElementById('inp').value
+            document.getElementById('msg').innerHTML = 'Thank you for changing the input to: <b>' + i + '</b>'
+            count = 0
+        }
+
+    }
+
+</script>
+</body>
+</html>
