@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JAVAScript basics</title>
+	</head>
+
+	<body>
+		<h1>Hello Dat19b</h1>
+		<div id="msg">Yes im here</div>
+
+		<input type="text" name="tex" id="inp">
+
+		<div id='knap'></div>
+
+		<!--	<button id="btn" onclick="greet()">Click me</button> -->
+
+		<script>
+
+
+			let x = document.getElementById('msg').innerHTML = 'WRROOOOOM!!'
+			document.getElementsByTagName('h1')[0].innerText = 'Nu er mit div tag fyldt ud'
+			
+			let btn = document.createElement('button')
+			btn.innerHTML = 'Click Me'
+			btn.setAttribute('id', 'btn')
+			btn.setAttribute('onclick', 'greet()')
+			document.getElementsByTagName('div')[1].appendChild(btn)
+
+			
+
+			let greet = function(){
+				let x = document.getElementById('inp').value
+				//console.log(x)
+				document.getElementById('msg').innerHTML = x
+			}
+
+		</script>
+
+
+	</body>
+
+
+</html>
